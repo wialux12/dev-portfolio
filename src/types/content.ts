@@ -38,6 +38,8 @@ export interface Project {
   role: string;
   stack: string[];
   cover: ProjectImage;
+  /** Пара скриншотов для парного показа в блоке обложки (режим "contain") — заполняет кадр, не оставляя его пустым при одном узком мобильном экране. */
+  coverPair?: [ProjectImage, ProjectImage];
   gallery: ProjectImage[];
   imageFit?: ProjectImageFit;
   links: ProjectLink[];

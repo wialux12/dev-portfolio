@@ -4,7 +4,9 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/motion/reveal";
 import { Badge } from "@/components/ui/badge";
+import { PhonePair } from "@/components/phone-pair";
 import type { Project } from "@/types/content";
+import { cn } from "@/lib/utils";
 
 export function CaseHero({ project }: { project: Project }) {
   const isContain = project.imageFit === "contain";
@@ -80,21 +82,28 @@ export function CaseHero({ project }: { project: Project }) {
             {isContain && (
               <div
                 aria-hidden
-                className="absolute top-1/2 left-1/2 h-[80%] w-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.08] blur-[100px]"
+                className={cn(
+                  "absolute top-1/2 left-1/2 h-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.08] blur-[100px]",
+                  project.coverPair ? "w-[70%]" : "w-[50%]"
+                )}
               />
             )}
-            <Image
-              src={project.cover.src}
-              alt={project.cover.alt}
-              fill
-              priority
-              sizes="(min-width: 1024px) 1200px, 100vw"
-              className={
-                isContain
-                  ? "object-contain object-center p-10 drop-shadow-2xl md:p-16"
-                  : "object-cover object-top"
-              }
-            />
+            {isContain && project.coverPair ? (
+              <PhonePair images={project.coverPair} priority />
+            ) : (
+              <Image
+                src={project.cover.src}
+                alt={project.cover.alt}
+                fill
+                priority
+                sizes="(min-width: 1024px) 1200px, 100vw"
+                className={
+                  isContain
+                    ? "object-contain object-center p-10 drop-shadow-2xl md:p-16"
+                    : "object-cover object-top"
+                }
+              />
+            )}
           </div>
         </Reveal>
       </Container>

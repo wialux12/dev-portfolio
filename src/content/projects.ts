@@ -111,6 +111,16 @@ export const projects: Project[] = [
       src: "/work/shib/01-welcome.png",
       alt: "ШИБ IV — приветственный экран мини-приложения",
     },
+    coverPair: [
+      {
+        src: "/work/shib/01-welcome.png",
+        alt: "Приветственный экран с фото участников форума",
+      },
+      {
+        src: "/work/shib/02-schedule.png",
+        alt: "Расписание форума по дням, с точным временем и локацией",
+      },
+    ],
     gallery: [
       {
         src: "/work/shib/01-welcome.png",
