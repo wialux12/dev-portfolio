@@ -94,7 +94,7 @@ export const projects: Project[] = [
     title: "Школа Интернет-БЕЗопасности",
     tagline: "Telegram Mini App международного молодёжного форума ШИБ IV",
     category: "Telegram Mini App",
-    year: "2026",
+    year: "2025",
     status: "live",
     statusLabel: "Отработал форум ШИБ IV",
     imageFit: "contain",
