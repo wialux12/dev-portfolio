@@ -97,6 +97,7 @@ export const projects: Project[] = [
     year: "2026",
     status: "live",
     statusLabel: "Отработал форум ШИБ IV",
+    imageFit: "contain",
     role: "Full-stack: архитектура фронтенда, мультиязычность, PWA, все экраны приложения",
     stack: [
       "React 19",

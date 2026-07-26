@@ -24,12 +24,13 @@ export function ProjectFeature({
 }) {
   const frameRef = useRef<HTMLAnchorElement>(null);
   const imgWrapRef = useRef<HTMLDivElement>(null);
+  const isContain = project.imageFit === "contain";
 
   useLayoutEffect(() => {
     const prefersReduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-    if (prefersReduced || !frameRef.current || !imgWrapRef.current) return;
+    if (prefersReduced || isContain || !frameRef.current || !imgWrapRef.current) return;
 
     const ctx = gsap.context(() => {
       gsap.fromTo(
@@ -49,7 +50,7 @@ export function ProjectFeature({
     });
 
     return () => ctx.revert();
-  }, []);
+  }, [isContain]);
 
   return (
     <article className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-6">
@@ -65,13 +66,26 @@ export function ProjectFeature({
             ref={frameRef}
             className="group relative block aspect-[16/11] overflow-hidden rounded-2xl border border-border bg-card"
           >
-            <div ref={imgWrapRef} className="absolute inset-0">
+            {isContain && (
+              <div
+                aria-hidden
+                className="absolute top-1/2 left-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.08] blur-[80px]"
+              />
+            )}
+            <div
+              ref={imgWrapRef}
+              className={cn("absolute inset-0", isContain && "p-10 md:p-14")}
+            >
               <Image
                 src={project.cover.src}
                 alt={project.cover.alt}
                 fill
                 sizes="(min-width: 1024px) 58vw, 100vw"
-                className="scale-110 object-cover object-top"
+                className={
+                  isContain
+                    ? "object-contain object-center drop-shadow-2xl"
+                    : "scale-110 object-cover object-top"
+                }
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

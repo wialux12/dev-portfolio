@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { ScrambleReveal } from "@/components/motion/scramble-reveal";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/content/site";
-import { achievements } from "@/content/achievements";
+import { valueProps } from "@/content/value-props";
 
 export function Hero() {
   return (
@@ -65,10 +65,10 @@ export function Hero() {
 
         <Reveal delay={0.36}>
           <dl className="flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-border pt-8 font-mono text-sm text-muted-foreground">
-            {achievements.slice(0, 3).map((item) => (
-              <div key={item.label} className="flex items-baseline gap-2">
-                <dt className="font-semibold text-foreground">{item.value}</dt>
-                <dd>{item.label}</dd>
+            {valueProps.map((item) => (
+              <div key={item.title} className="flex items-baseline gap-2">
+                <dt className="font-semibold text-foreground">{item.title}</dt>
+                <dd>{item.description}</dd>
               </div>
             ))}
           </dl>

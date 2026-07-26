@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge";
 import type { Project } from "@/types/content";
 
 export function CaseHero({ project }: { project: Project }) {
+  const isContain = project.imageFit === "contain";
+
   return (
     <section className="pt-32 pb-16 md:pt-40 md:pb-20">
       <Container className="flex flex-col gap-10">
@@ -75,13 +77,23 @@ export function CaseHero({ project }: { project: Project }) {
 
         <Reveal delay={0.25}>
           <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-border bg-card">
+            {isContain && (
+              <div
+                aria-hidden
+                className="absolute top-1/2 left-1/2 h-[80%] w-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.08] blur-[100px]"
+              />
+            )}
             <Image
               src={project.cover.src}
               alt={project.cover.alt}
               fill
               priority
               sizes="(min-width: 1024px) 1200px, 100vw"
-              className="object-cover object-top"
+              className={
+                isContain
+                  ? "object-contain object-center p-10 drop-shadow-2xl md:p-16"
+                  : "object-cover object-top"
+              }
             />
           </div>
         </Reveal>
