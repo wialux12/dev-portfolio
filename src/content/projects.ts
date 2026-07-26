@@ -48,7 +48,7 @@ export const projects: Project[] = [
         alt: "Массовая Telegram-рассылка прямо из админ-панели",
       },
     ],
-    links: [],
+    links: [{ label: "Сайт", href: "https://магазин.вашдистрибьютор.рф/" }],
     metrics: [
       { value: "750+", label: "товаров в каталоге" },
       { value: "2", label: "региона доставки" },
