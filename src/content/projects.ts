@@ -36,10 +36,6 @@ export const projects: Project[] = [
         alt: "Каталог с фильтрами по категориям и оптовыми ценами",
       },
       {
-        src: "/work/trendbox/03-cabinet.png",
-        alt: "Личный кабинет B2B-клиента: статус юрлица, история заявок",
-      },
-      {
         src: "/work/trendbox/04-admin-products.png",
         alt: "Админ-панель: каталог из 750+ товаров",
       },
@@ -108,31 +104,23 @@ export const projects: Project[] = [
       "vite-plugin-pwa",
     ],
     cover: {
-      src: "/work/shib/01-welcome.png",
-      alt: "ШИБ IV — приветственный экран мини-приложения",
+      src: "/work/shib/02-schedule.png",
+      alt: "ШИБ IV — расписание форума по дням",
     },
     coverPair: [
       {
-        src: "/work/shib/01-welcome.png",
-        alt: "Приветственный экран с фото участников форума",
-      },
-      {
         src: "/work/shib/02-schedule.png",
         alt: "Расписание форума по дням, с точным временем и локацией",
+      },
+      {
+        src: "/work/shib/04-partners.png",
+        alt: "Грид партнёров форума внутри мини-приложения",
       },
     ],
     gallery: [
       {
-        src: "/work/shib/01-welcome.png",
-        alt: "Приветственный экран с фото участников форума",
-      },
-      {
         src: "/work/shib/02-schedule.png",
         alt: "Расписание форума по дням, с точным временем и локацией",
-      },
-      {
-        src: "/work/shib/03-rating.png",
-        alt: "Рейтинг участников: геймификация вовлечённости",
       },
       {
         src: "/work/shib/04-partners.png",
