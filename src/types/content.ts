@@ -41,6 +41,8 @@ export interface Project {
   /** Пара скриншотов для парного показа в блоке обложки (режим "contain") — заполняет кадр, не оставляя его пустым при одном узком мобильном экране. */
   coverPair?: [ProjectImage, ProjectImage];
   gallery: ProjectImage[];
+  /** Пояснение над галереей — например, что экраны собраны на вымышленных данных. */
+  galleryNote?: string;
   imageFit?: ProjectImageFit;
   links: ProjectLink[];
   metrics: ProjectMetric[];

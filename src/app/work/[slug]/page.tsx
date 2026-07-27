@@ -88,7 +88,11 @@ export default async function ProjectPage({
         <p>{project.result}</p>
       </CaseSection>
 
-      <CaseGallery gallery={project.gallery} fit={project.imageFit} />
+      <CaseGallery
+        gallery={project.gallery}
+        fit={project.imageFit}
+        note={project.galleryNote}
+      />
 
       <CaseNav project={nextProject} />
     </>

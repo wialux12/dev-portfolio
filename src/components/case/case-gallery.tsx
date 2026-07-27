@@ -8,9 +8,11 @@ import type { ProjectImage, ProjectImageFit } from "@/types/content";
 export function CaseGallery({
   gallery,
   fit = "cover",
+  note,
 }: {
   gallery: ProjectImage[];
   fit?: ProjectImageFit;
+  note?: string;
 }) {
   if (gallery.length < 2) return null;
 
@@ -19,7 +21,12 @@ export function CaseGallery({
   return (
     <section className="py-16 md:py-20">
       <Container className="flex flex-col gap-10">
-        <SectionHeading index="—" label="Экраны" title="Как это выглядит" />
+        <SectionHeading
+          index="—"
+          label="Экраны"
+          title="Как это выглядит"
+          description={note}
+        />
 
         <RevealGroup
           className={cn(
