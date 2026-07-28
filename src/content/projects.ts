@@ -24,29 +24,33 @@ export const projects: Project[] = [
       "MAX Bot API",
     ],
     cover: {
-      src: "/work/trendbox/01-hero.png",
-      alt: "TrendBox — витрина на MacBook и мобильный каталог на iPhone",
+      src: "/work/trendbox/01-homepage.png",
+      alt: "TrendBox — главная страница витрины с каталогом напитков",
     },
     gallery: [
       {
-        src: "/work/trendbox/01-hero.png",
-        alt: "Витрина на MacBook и мобильный каталог на iPhone",
+        src: "/work/trendbox/01-homepage.png",
+        alt: "Главная страница: оффер, ключевые цифры, витрина каталога",
       },
       {
         src: "/work/trendbox/02-catalog.png",
         alt: "Каталог с карточками товаров и оптовыми ценами",
       },
       {
-        src: "/work/trendbox/03-mobile-telegram.png",
-        alt: "Мобильная витрина и уведомление Telegram-бота о принятой заявке",
+        src: "/work/trendbox/03-cabinet.png",
+        alt: "Личный кабинет B2B-клиента: статус юрлица, история заявок",
       },
       {
-        src: "/work/trendbox/04-admin-dashboard.png",
-        alt: "Админ-панель: товары, Telegram/MAX-рассылка, личный кабинет клиента",
+        src: "/work/trendbox/04-admin-products.png",
+        alt: "Админ-панель: каталог из 750+ товаров",
+      },
+      {
+        src: "/work/trendbox/05-admin-telegram.png",
+        alt: "Массовая Telegram-рассылка прямо из админ-панели",
       },
     ],
     galleryNote:
-      "Экраны ниже — реконструкция интерфейса с вымышленными данными: реальный каталог и клиентская база дистрибьютора не публикуются.",
+      "Названия товаров, цены и данные личного кабинета на скриншотах изменены на вымышленные: реальный ассортимент и клиенты дистрибьютора не публикуются.",
     links: [{ label: "Сайт", href: "https://магазин.вашдистрибьютор.рф/" }],
     metrics: [
       { value: "750+", label: "товаров в каталоге" },
